@@ -5,9 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
+    <!--Style-->
+    <link rel="stylesheet" href="./css/style.css">
+    <!--Icon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
     <!---->
     <div id="app">
+        <section class="slider">
+            <!--icona della freccia-->
+            <div class="prev-icon">
+                <div class="fas fa-arrow-left"></div>
+            </div>
+     
+            <!--immagini-->
+            <div class="images">
+
+                <img :src="photos[indexPhoto]" alt="pippo">
+               <!--<img src="./img/img-1.jpg" alt="">--> 
+            </div>
+
+            <!--icona della freccia-->
+            <div class="next-icon">
+                <div class="fas fa-arrow-right"></div>
+            </div>
+        </section>
+        <div class="nav">
+            <i class="fas fa-circle active"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i>
+        </div>
      
 
     </div>
