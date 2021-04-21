@@ -7,6 +7,8 @@
     <title>Slider</title>
     <!--Style-->
     <link rel="stylesheet" href="./css/style.css">
+    <!--Vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!--Icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
@@ -14,19 +16,18 @@
     <div id="app">
         <section class="slider">
             <!--icona della freccia-->
-            <div class="prev-icon">
+            <div class="prev-icon" @click="prevPhoto">
                 <div class="fas fa-arrow-left"></div>
             </div>
      
             <!--immagini-->
             <div class="images">
-
-                <img :src="photos[indexPhoto]" alt="pippo">
-               <!--<img src="./img/img-1.jpg" alt="">--> 
+               <img :src="photos[indexPhoto]" alt="pippo">
+               <!--<img src="./image/tiger-jpg.jpg" alt="">-->
             </div>
 
             <!--icona della freccia-->
-            <div class="next-icon">
+            <div class="next-icon" @click="nextPhoto">
                 <div class="fas fa-arrow-right"></div>
             </div>
         </section>
@@ -39,6 +40,8 @@
      
 
     </div>
+    <!--script-->
+    <script src="./js/script.js"></script>
 </head>
 <body>
     
