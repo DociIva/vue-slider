@@ -11,7 +11,15 @@ const app = new Vue({
             './image/delfini.jpg'
         ],
         indexPhoto: 0, 
-    },    // avanti e inditro delle foto 
+        intervalId: 0,
+    }, 
+    created() {
+        // cret istanza Vue
+        console.log('Creato!')
+        this.startLoop();
+    },
+    
+                  // avanti e inditro delle foto 
     methods: {
         prevPhoto() {
             this.indexPhoto -= 1;
@@ -30,6 +38,15 @@ const app = new Vue({
         setPhoto(index) {
             console.log(index);
             this.indexPhoto = index;
+        },
+           // per il timer inizio
+        startLoop() {
+            this.intevalId = setInterval(() => {
+               this.nextPhoto();
+            }, 3000);
+        },  // sotp quando sei sopra
+        stopLoop() {
+            clearInterval(this.intevalId);
         }
     }
 
