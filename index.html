@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider</title>
+      <!--Vue-->
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <!--Style-->
     <link rel="stylesheet" href="./css/style.css">
-    <!--Vue-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  
     <!--Icon-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
@@ -32,10 +33,18 @@
             </div>
         </section>
         <div class="nav">
-            <i class="fas fa-circle active"></i>
+
+           <!-- <i class="fas fa-circle active"></i>
             <i class="fas fa-circle"></i>
             <i class="fas fa-circle"></i>
-            <i class="fas fa-circle"></i>
+            <i class="fas fa-circle"></i> -->
+            <!-- come mettere i pallini col alle img-->
+            <i v-for="(photo, index) in photos"
+               class="fas fa-circle"
+               :class="{ active: index == indexPhoto }"
+               @click="setPhoto(index)"
+            ></i>
+
         </div>
      
 

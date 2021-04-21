@@ -66,6 +66,6 @@
 .nav i:hover {
     color: white;
 }
-.nav i:active {
-    color: lightcoral;
+.nav i.active {
+    color: blue;
 }
